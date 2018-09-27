@@ -95,9 +95,7 @@
                     Console.WriteLine($"Iteration {iteration}. Elapsed time: {operation.Telemetry.Duration}. Collected Telemetry: {collectedItems.Size}/{collectedItems.Count}. Sent Telemetry: {sentItems.Size}/{sentItems.Count}. Ratio: {1.0 * collectedItems.Size / sentItems.Size}");
 
                     reductionsize.TrackValue(collectedItems.Size - sentItems.Size);
-#pragma warning disable 0618
                     client.TrackMetric("[RAW] Reduction Size", collectedItems.Size - sentItems.Size);
-#pragma warning restore 0618
                 }
             }
         }
