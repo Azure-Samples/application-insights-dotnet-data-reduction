@@ -67,8 +67,7 @@
             var client = new TelemetryClient(configuration);
 
             // configure metrics collection
-            MetricManager metricManager = new MetricManager(client);
-            var reductionsize = metricManager.CreateMetric("Reduction Size");
+            var reductionsize = client.GetMetric("Reduction Size");
 
             var iteration = 0;
             var http = new HttpClient();
@@ -95,7 +94,7 @@
                     client.StopOperation(operation);
                     Console.WriteLine($"Iteration {iteration}. Elapsed time: {operation.Telemetry.Duration}. Collected Telemetry: {collectedItems.Size}/{collectedItems.Count}. Sent Telemetry: {sentItems.Size}/{sentItems.Count}. Ratio: {1.0 * collectedItems.Size / sentItems.Size}");
 
-                    reductionsize.Track(collectedItems.Size - sentItems.Size);
+                    reductionsize.TrackValue(collectedItems.Size - sentItems.Size);
 #pragma warning disable 0618
                     client.TrackMetric("[RAW] Reduction Size", collectedItems.Size - sentItems.Size);
 #pragma warning restore 0618
