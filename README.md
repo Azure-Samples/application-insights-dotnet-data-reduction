@@ -1,7 +1,12 @@
 ---
-services: application-insights
-platforms: dotnet
-author: SergeyKanzhelev
+page_type: sample
+languages:
+- csharp
+products:
+- azure
+description: "This is a demo application for the different data reduction techniques
+used in Application Insights."
+urlFragment: application-insights-dotnet-data-reduction
 ---
 
 # Optimize Telemetry with Application Insights
