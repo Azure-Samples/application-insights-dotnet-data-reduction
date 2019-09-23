@@ -4,8 +4,7 @@ languages:
 - csharp
 products:
 - azure
-description: "This is a demo application for the different data reduction techniques
-used in Application Insights."
+description: "This is a demo application for the different data reduction techniques used in Application Insights."
 urlFragment: application-insights-dotnet-data-reduction
 ---
 
