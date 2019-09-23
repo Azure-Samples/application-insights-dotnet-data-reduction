@@ -10,12 +10,7 @@ urlFragment: application-insights-dotnet-data-reduction
 
 # Optimize Telemetry with Application Insights
 
-This is a demo application for the different data reduction techniques
-used in Application Insights. It gives overview of the Application
-Insights domain model, how telemetry is collected, and what coding
-techniques are available to decrease the amount of telemetry while
-preserving monitoring capabilities, analytical accuracy, and diagnosing
-depth.
+This is a demo application for the different data reduction techniques used in Application Insights. It gives overview of the Application Insights domain model, how telemetry is collected, and what coding techniques are available to decrease the amount of telemetry while preserving monitoring capabilities, analytical accuracy, and diagnosing depth.
 
 ## Features
 
